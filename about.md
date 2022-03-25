@@ -5,7 +5,7 @@ permalink: /about/
 main_nav: true
 ---
 
-![alt text]({{ site.baseurl }}/assets/profile.png "Profile Picture"){:.profile}
+![alt text]({{ site.baseurl }}/assets/daisy.png "Profile Picture"){:.profile}
 
 개발 꿈나무의 블로그입니다. 
 Visit my [Github](http://github.com/hdaisywd)
