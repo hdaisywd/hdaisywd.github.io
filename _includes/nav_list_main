@@ -18,21 +18,21 @@
             <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
             {% for category in site.categories %}
                 {% if category[0] == "Algorithm" %}
-                    <li><a href="/categories/algorithm" class="">Database ({{category[1].size}})</a></li>
+                    <li><a href="/categories/algorithm" class="">Algorithm ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
             {% for category in site.categories %}
-                {% if category[0] == "Crawling 크롤링" %}
-                    <li><a href="/categories/crawling" class="">OS ({{category[1].size}})</a></li>
+                {% if category[0] == "crawling" %}
+                    <li><a href="/categories/crawling" class="">Crawling ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
             {% for category in site.categories %}
-                {% if category[0] == "CodingTest 코테" %}
-                    <li><a href="/categories/codingtest" class="">Network ({{category[1].size}})</a></li>
+                {% if category[0] == "codingtest" %}
+                    <li><a href="/categories/codingtest" class="">codingtest({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
-        <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
+        <!--span 태그로 카테고리들을 크게 분류 ex C/C++/C#-->
         <span class="nav__sub-title">for Projects</span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
@@ -40,7 +40,7 @@
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
                     {% if category[0] == "NodeJS" %}
-                        <li><a href="/categories/nodejs" class="">C ++ ({{category[1].size}})</a></li>
+                        <li><a href="/categories/nodejs" class="">NodeJS ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
                 <!-- {% for category in site.categories %}
@@ -52,8 +52,8 @@
         <span class="nav__sub-title">ETC</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Etc" %}
-                        <li><a href="/categories/etc" class="">ETC ({{category[1].size}})</a></li>
+                    {% if category[0] == "etc" %}
+                        <li><a href="/categories/etc" class="">etc ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
