@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Daisy Hong"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "../images/potato.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Steady Progress - 꾸준한 기록"
   location         : "Republic of Korea"
   email            :
@@ -290,6 +290,7 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar_main: true
 
   # _pages
   - scope:
