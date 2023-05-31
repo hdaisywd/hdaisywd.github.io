@@ -53,6 +53,11 @@
                         <li><a href="/categories/crawling" class="">Crawling 크롤링 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
+                {% for category in site.categories %}
+                    {% if category[0] == "codingtest" %}
+                        <li><a href="/categories/codingtest" class="">Coding Test 코테 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         <span class="nav__sub-title">Projects</span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
