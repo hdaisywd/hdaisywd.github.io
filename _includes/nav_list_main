@@ -54,6 +54,11 @@
                     {% endif %}
                 {% endfor %}
                 {% for category in site.categories %}
+                    {% if category[0] == "appdev" %}
+                        <li><a href="/categories/appdev" class="">App Dev 앱 개발 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% for category in site.categories %}
                     {% if category[0] == "codingtest" %}
                         <li><a href="/categories/codingtest" class="">Coding Test 코테 ({{category[1].size}})</a></li>
                     {% endif %}
