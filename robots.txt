@@ -1,0 +1,5 @@
+Permalink
+User-agent: *
+Allow: /
+
+Sitemap: https://hdaisywd.github.io/sitemap.xml
