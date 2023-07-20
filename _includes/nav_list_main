@@ -44,28 +44,18 @@
                 <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
-                    {% if category[0] == "troubleshooting" %}
-                        <li><a href="/categories/troubleshooting" class="">Trouble Shooting 에러잡기 ({{category[1].size}})</a></li>
+                    {% if category[0] == "appdev" %}
+                        <li><a href="/categories/appdev" class="">App Dev 앱 공부 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
                 {% for category in site.categories %}
-                    {% if category[0] == "appdev" %}
-                        <li><a href="/categories/appdev" class="">App Dev 앱 개발 ({{category[1].size}})</a></li>
+                    {% if category[0] == "webdev" %}
+                        <li><a href="/categories/NodeJS" class="">Web Dev 웹 공부 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
                 {% for category in site.categories %}
                     {% if category[0] == "codingtest" %}
                         <li><a href="/categories/codingtest" class="">Coding Test 코테 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-                {% for category in site.categories %}
-                    {% if category[0] == "NodeJS" %}
-                        <li><a href="/categories/NodeJS" class="">NodeJS ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-                {% for category in site.categories %}
-                    {% if category[0] == "crawling" %}
-                        <li><a href="/categories/crawling" class="">Crawling 크롤링 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
