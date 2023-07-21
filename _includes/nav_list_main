@@ -62,26 +62,17 @@
         <span class="nav__sub-title">Projects</span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
-                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
-                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
                     {% if category[0] == "Projects" %}
                         <li><a href="/categories/Projects" class="">Projects 프로젝트 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">And more... </span>
+        <span class="nav__sub-title">More</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "error" %}
-                        <li><a href="/categories/error" class="">!Error ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "etc" %}
-                        <li><a href="/categories/etc" class="">etc ({{category[1].size}})</a></li>
+                    {% if category[0] == "Error" %}
+                        <li><a href="/categories/Error" class="">Error 에러와 해결({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
