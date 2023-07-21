@@ -50,7 +50,7 @@
                 {% endfor %}
                 {% for category in site.categories %}
                     {% if category[0] == "webdev" %}
-                        <li><a href="/categories/NodeJS" class="">Web Dev 웹 공부 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/webdev" class="">Web Dev 웹 공부 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
                 {% for category in site.categories %}
