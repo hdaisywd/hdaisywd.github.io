@@ -11,55 +11,73 @@
             📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
       </li>
       <li>
-        <span class="nav__sub-title">CS</span>
+        <span class="nav__sub-title">Computer Science 기초 공부</span>
         <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
         <ul>
             <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
             <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
             {% for category in site.categories %}
                 {% if category[0] == "Database" %}
-                    <li><a href="/categories/Database" class="">Database 데이터베이스 ({{category[1].size}})</a></li>
+                    <li><a href="/categories/Database" class="">Database ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
             {% for category in site.categories %}
                 {% if category[0] == "OperatingSystem" %}
-                    <li><a href="/categories/OperatingSystem" class="">OS 운영체제/컴퓨터구조 ({{category[1].size}})</a></li>
+                    <li><a href="/categories/OperatingSystem" class="">Operating System ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
             {% for category in site.categories %}
                 {% if category[0] == "Network" %}
-                    <li><a href="/categories/Network" class="">Network 네트워크 ({{category[1].size}})</a></li>
+                    <li><a href="/categories/Network" class="">Network ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
             {% for category in site.categories %}
                 {% if category[0] == "Algorithm" %}
-                    <li><a href="/categories/algorithm" class="">Algorithm/Data Structure 알고리즘/자료구조 ({{category[1].size}})</a></li>
+                    <li><a href="/categories/algorithm" class="">Algorithm & Data Structure ({{category[1].size}})</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
-        <!--span 태그로 카테고리들을 크게 분류 ex. C/C++/C#-->
-        <span class="nav__sub-title">Studies</span>
-            <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+        <span class="nav__sub-title">App Dev 앱 개발</span>
             <ul>
-                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
-                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
-                    {% if category[0] == "appdev" %}
-                        <li><a href="/categories/appdev" class="">App Dev 앱 공부 ({{category[1].size}})</a></li>
+                    {% if category[0] == "iOS" %}
+                        <li><a href="/categories/iOS" class="">iOS ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
                 {% for category in site.categories %}
-                    {% if category[0] == "webdev" %}
-                        <li><a href="/categories/webdev" class="">Web Dev 웹 공부 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-                {% for category in site.categories %}
-                    {% if category[0] == "codingtest" %}
-                        <li><a href="/categories/codingtest" class="">Coding Test 코테 ({{category[1].size}})</a></li>
+                    {% if category[0] == "flutter" %}
+                        <li><a href="/categories/flutter" class="">flutter ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">Projects</span>
+        <!--span 태그로 카테고리들을 크게 분류 ex. C/C++/C#-->
+        <span class="nav__sub-title">Web Dev 웹 개발</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "html & css" %}
+                        <li><a href="/categories/htmlcss" class="">Web Dev ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% for category in site.categories %}
+                    {% if category[0] == "Vanilla JS" %}
+                        <li><a href="/categories/vanillajs" class="">Web Dev ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% for category in site.categories %}
+                    {% if category[0] == "React JS" %}
+                        <li><a href="/categories/reactjs" class="">Web Dev ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Coding Test 코딩 테스트</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "codingtest" %}
+                        <li><a href="/categories/codingtest" class="">Coding Test ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Projects 프로젝트</span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
                 {% for category in site.categories %}
@@ -68,11 +86,11 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-        <span class="nav__sub-title">More</span>
+        <span class="nav__sub-title">More 더보기... </span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Error" %}
-                        <li><a href="/categories/Error" class="">Error 에러와 해결({{category[1].size}})</a></li>
+                        <li><a href="/categories/Error" class="">Error({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

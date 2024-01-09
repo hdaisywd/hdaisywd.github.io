@@ -1,2 +1,3 @@
 # hdaisywd.github.io
-My personal blog :>
+
+My personal blog logging everyday progress! :> 
