@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Daisy Hong"
   avatar           : "../images/potato.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "✍🏻 Today I learned ... "
+  bio              : "✍🏻 Today I learned!"
   location         : "Republic of Korea"
   email            :
   links:
