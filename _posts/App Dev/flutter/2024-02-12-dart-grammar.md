@@ -196,6 +196,7 @@ Map<int, bool> player = {
 ## 1. Function 
 
 하나의 표현식만 포함하는 경우 아래와 같이 표현할 수 있다. 
+
 ```dart
 String greeting(String name) => 'Hello $name, nice to meet you!';
 
@@ -255,6 +256,7 @@ void main() {
 ### ?? 연산자
 
 Null이 아니라면 본래의 값을, 맞다면 오른쪽 값을 리턴한다. 
+
 ```dart
 String? name;
 print(name ?? 'daisy'); // daisy
