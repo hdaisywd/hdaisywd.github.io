@@ -210,6 +210,7 @@ void main() {
 
 - 중괄호를 적어주지 않으면 파라미터 명을 적지 않고 데이터를 순서대로 넣어 전달 해 줄 수 있다.
 - 이때 인자를 하나라도 넘겨주지 않으면 컴파일이 되지 않는다. 
+
 ```dart
 String greeting(String name, int age) => 'name: $name, age: $age';
 
@@ -222,6 +223,7 @@ void main() {
 
 - 중괄호를 넣어주면 어떠한 파라미터에 어떠한 데이터를 넘겨주는 것인지 명시해야 한다. 이때 전달 순서는 중요하지 않다. 
 - required modifier를 사용하여 null-safe한 코드를 짤 수 있다. 함수를 호출 할 때 무조건 값을 전해줘야 함을 컴파일러가 알 수 있게 되기 때문이다. 
+
 ```dart
 String greetings({
 	required String name,
