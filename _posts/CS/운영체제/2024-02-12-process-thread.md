@@ -1,10 +1,13 @@
 ---
-title: "첫번째 포스팅!"
+title: "[OS] 프로세스와 스레드에 대하여"
 sidebar_main: true
 categories:
   - OperatingSystem
 tags:
   - OperatingSystem
+toc: true
+toc_sticky: true
+toc_label: "Process & Thread"
 ---
 
 
