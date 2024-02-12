@@ -239,6 +239,7 @@ void main() {
 
 - positional parameter는 모든 인자를 전해줘야 한다. 그러나 bracket을 사용하면 옵셔널로 사용할 수 있다.
 - 이때 null crash 방지를 위해 default value를 지정해줘야 한다. 
+
 ```dart
 String greeting(String name, int age, [String? country = 'Korea']) => 'name: $name, age: $age, country: $country';
 
