@@ -95,6 +95,7 @@ void main() {
 
 ### 🦭 그냥 nullable로 선언하면 안될까?
 
+예를 들어보자.  
 ```dart
 class Coffee {
 	String _temperature;
@@ -118,8 +119,8 @@ class Coffee {
 Dart는 public, protected, private과 같은 접근 제어자를 가지고 있지 않다. 
 대신 다른 기호를 사용하는데, underscore를 사용하게 되면 **정의된 .dart파일 (라이브러리) 안에서만 사용할 수 있다.**  underscore는 필드, 클래스, 메소드 등에 사용될 수 있다. 
 
-[참고 링크](https://stackoverflow.com/questions/53142171/what-does-underscore-before-variable-name-mean-for-flutter)
-It is common practice to make the `State` implementation of a widget private, so that it can only be instantiated by the corresponding `StatefulWidget`:
+[참고 링크](https://stackoverflow.com/questions/53142171/what-does-underscore-before-variable-name-mean-for-flutter)  
+It is common practice to make the `State` implementation of a widget private, so that it can only be instantiated by the corresponding `StatefulWidget`:  
 ```dart
 class MyPage extends StatefulWidget {
   @override
@@ -133,7 +134,8 @@ class _MyPageState extends State<MyPage> {
   }
 }
 ```
-```
+
+
 # Data Types
 
 👉 dart의 자료형은 모두 **객체**다. 모두 class라는 뜻! 
@@ -188,7 +190,8 @@ Map<int, bool> player = {
 	3: true,
 };
 ```
-
+  
+  
 # Function
 
 👉 dart는 객체지향언어로 함수도 객체이며 타입이 function이다. 즉, **함수를 변수에 할당하거나 다른 함수에 인수로 전달할 수 있음**을 의미한다. 
@@ -284,7 +287,8 @@ void main() {
 	lst = [1, 2, 3];
 }
 ```
-
+  
+  
 # Class
 
 ## 1. Property
