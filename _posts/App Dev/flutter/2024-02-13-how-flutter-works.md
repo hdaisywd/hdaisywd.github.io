@@ -72,6 +72,6 @@ toc_label: "Flutter"
 ----
 참고
 
-[공식 문서](https://docs.flutter.dev/resources/architectural-overview)
+[공식 문서](https://docs.flutter.dev/resources/architectural-overview) <br>
 [Composition이란](https://levelup.gitconnected.com/composition-in-flutter-dart-functional-programming-part-3-ffba917aee3d)
 
