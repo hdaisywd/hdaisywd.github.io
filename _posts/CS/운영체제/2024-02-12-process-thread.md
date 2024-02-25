@@ -55,7 +55,9 @@ toc_label: "Process & Thread"
 
  멀티 스레딩이란 **하나의 프로세스 안에 여러개의 스레드가 존재**하는 것으로, 이를 **동시에 처리**하는 것을 의미한다.
  
-  ![](https://i.imgur.com/wSMdB8K.png)
+  ![](https://i.imgur.com/wSMdB8K.png) 
+
+
 멀티 스레드를 비유로 설명하자면 다음과 위의 사진과 같다. 
 
 - Process: 한 가구
