@@ -1,3 +1,16 @@
+---
+title: "[OS] 운영체제 개관"
+sidebar_main: true
+categories:
+  - OperatingSystem
+tags:
+  - OperatingSystem
+toc: true
+toc_sticky: true
+toc_label: "OS?"
+---
+
+![](https://i.imgur.com/Q2jE1td.png)
 
 # 1. OS?
 ### 운영체제의 정의 
