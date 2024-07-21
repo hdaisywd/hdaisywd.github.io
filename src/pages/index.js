@@ -4,58 +4,42 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import PostCard from "../components/ui/PostCard"
+import { Stack } from "@chakra-ui/react"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
+  console.log(location)
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
         <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
+        <p>아직 쓰인 글이 하나도 없습니다 :(</p>
       </Layout>
     )
   }
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Bio />
+      
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+        <Stack spacing='1em'>
+          {posts.map(post => {
+            const title = post.frontmatter.title || post.fields.slug
 
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
+            return (
+              <PostCard
+                key={post.fields.slug}
+                url={post.fields.slug}
+                title={title}
+                description={post.frontmatter.description}
+                date={post.frontmatter.date}
+              />
+            )
+          })}
+        </Stack>
       </ol>
     </Layout>
   )
@@ -87,6 +71,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          category
         }
       }
     }

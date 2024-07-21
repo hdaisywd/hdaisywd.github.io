@@ -9,15 +9,16 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `🥷🏻 Dahhong`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `@다홍`,
+      summary: `이제는 더이상 물러날 곳이 없는 블로그입니다`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `이제는! 더이상! 물러날 곳이 없다!`,
+    siteUrl: `https://www.dahhong.com`,
     social: {
-      twitter: `kylemathews`,
+      github: `hdaisywd`,
+      email: `hdaisywd@gmail.com`,
     },
   },
   plugins: [
@@ -52,7 +53,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              noInlineHighlight: true,
+            }
+          }
         ],
       },
     },

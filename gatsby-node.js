@@ -6,9 +6,12 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { graphql } = require("gatsby")
 
 // Define the template for blog post
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
+// 카테고리 페이지 만들기
+const categoryPosts = path.resolve(`./src/templates/category-posts.js`)
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -60,6 +63,50 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  const categoryResult = await graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            id
+            frontmatter {
+              category
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const titleResult = await graphql(`
+    {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  
+  const title = titleResult.data.site.siteMetadata.title
+  const categories = new Set()
+  categoryResult.data.allMarkdownRemark.edges.forEach(edge => {
+    if (edge.node.frontmatter.category) {
+      categories.add(edge.node.frontmatter.category)
+    }
+  })
+
+  categories.forEach(category => {
+    createPage({
+      path: `/category/${category}`,
+      component: categoryPosts,
+      context: {
+        title: title,
+        category: category,
+      },
+    })
+  })
 }
 
 /**
@@ -104,7 +151,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Social {
-      twitter: String
+      github: String
     }
 
     type MarkdownRemark implements Node {
@@ -116,6 +163,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      category: String
     }
 
     type Fields {

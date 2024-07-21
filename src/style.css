@@ -250,6 +250,8 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-heading {
@@ -315,6 +317,16 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+}
+
+.gatsby-highlight-code-line {
+  background-color: #feb;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
 }
 
 /* Media queries */

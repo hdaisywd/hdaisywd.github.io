@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { Box, Heading, Text } from "@chakra-ui/react"
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -13,24 +14,17 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-        </header>
+        <Box>
+          <Text fontSize="3xl" m="0">{post.frontmatter.title}</Text>
+          <Text fontSize="sm">{post.frontmatter.date}</Text>
+        </Box>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
         <footer>
           <Bio />
         </footer>
-      </article>
       <nav className="blog-post-nav">
         <ul
           style={{
